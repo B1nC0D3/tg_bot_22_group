@@ -2,7 +2,7 @@ import os
 import telebot
 
 from dotenv import load_dotenv
-from filters import BlueFilter, GreenFilter, InverseFilter, RedFilter
+from filters import BlueFilter, GreenFilter, InverseFilter, RedFilter, SomeFilter
 from PIL import Image
 from telebot.types import KeyboardButton, ReplyKeyboardMarkup, Message
 
@@ -18,6 +18,7 @@ filters = {
     "Зеленый фильтр": GreenFilter(),
     "Синий фильтр": BlueFilter(),
     "Инверсия": InverseFilter(),
+    "SomeFilter": SomeFilter(),
 }
 
 # Словарь для хранения последней пользовательской картинки
