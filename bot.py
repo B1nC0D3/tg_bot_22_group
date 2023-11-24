@@ -9,6 +9,8 @@ from telebot.types import KeyboardButton, ReplyKeyboardMarkup, Message
 load_dotenv()
 
 TOKEN = os.getenv('TG_TOKEN')
+# TOKEN = 'UR_TOKEN'
+
 bot = telebot.TeleBot(TOKEN)
 
 filters = {
@@ -31,7 +33,7 @@ if not os.path.exists(images_folder):
 def handle_start(message: Message):
     bot.send_message(
         message.chat.id,
-        "Я бот, который накладывает фильтры на картинки. Пожалуйста, загрузите изображение.",
+        "Здарова! Я бот, который накладывает фильтры на картинки. Пожалуйста, загрузите изображение.",
     )
 
 
